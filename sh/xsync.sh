@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #1. 判断参数个数
-if [$# -lt 1]
+if [ $# -lt 1 ]
 then
 	echo Not Enough Arg!
 	exit!
@@ -15,10 +15,10 @@ do
 	for file in $@
 	do
 		#4 判断文件是否存在
-		if [-e $file]
+		if [ -e $file ]
 			then
 				#5 获取父目录
-				pdir=$(cd -P $(dirname $file)); pwd)
+				pdir=$(cd -P $(dirname $file); pwd)
 
 				#6 获取当前文件名称
 				fname=$(basename $file)
